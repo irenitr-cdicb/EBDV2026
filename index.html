@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Quién es Jesús? | Escuela Bíblica de Vacaciones 2026 - Iglesia Cristiana Bethel Tonanitla</title>
+<meta name="description" content="Escuela Bíblica de Vacaciones 2026 '¿Quién es Jesús?' del 20 al 24 de julio en la Iglesia Cristiana Bethel, Tonanitla. Inscribe a tu hijo gratis. Cinco días de aventura, juegos y aprendizaje bíblico para niños de 4 a 14 años.">
+<meta name="keywords" content="escuela biblica de vacaciones, EBV 2026, iglesia cristiana bethel tonanitla, quien es jesus, niños, campamento cristiano">
+<meta property="og:title" content="Escuela Bíblica de Vacaciones 2026 - ¿Quién es Jesús?">
+<meta property="og:description" content="Cinco días para descubrir quién es Jesús. Del 20 al 24 de julio de 2026. ¡Inscripción gratuita!">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' x='10' font-size='70'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ===========================================================
+     VARIABLES GLOBALES - Paleta de colores y tipografía
+     =========================================================== */
+  :root{
+    --azul: #0D47A1;
+    --azul-oscuro: #08305E;
+    --azul-claro: #4F83CC;
+    --celeste: #BBDEFB;
+    --celeste-suave: #E3F2FD;
+    --amarillo: #FFD54F;
+    --amarillo-oscuro: #FFA000;
+    --blanco: #FFFFFF;
+    --gris-texto: #3A4A5C;
+    --sombra: 0 10px 30px rgba(13,71,161,0.15);
+    --radio: 24px;
+    --font-display: 'Baloo 2', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family: var(--font-body);
+    color: var(--gris-texto);
+    background: var(--blanco);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  h1,h2,h3,h4{font-family: var(--font-display); color: var(--azul-oscuro); line-height:1.2;}
+  img{max-width:100%; display:block;}
+  a{text-decoration:none; color:inherit;}
+  section{position:relative; padding: 90px 6vw;}
+  .contenedor{max-width:1180px; margin:0 auto;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background: var(--celeste-suave); color: var(--azul);
+    font-weight:800; font-size:0.85rem; letter-spacing:0.08em;
+    text-transform:uppercase; padding:8px 18px; border-radius:50px;
+    margin-bottom:18px;
+  }
+  .titulo-seccion{font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 14px;}
+  .subtitulo-seccion{font-size:1.1rem; color:#5b6b7d; max-width:640px; margin-bottom:50px;}
+
+  /* ===========================================================
+     ANIMACIÓN FADE UP - aplicada por scroll con IntersectionObserver
+     =========================================================== */
+  .fade-up{
+    opacity:0; transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade-up.visible{opacity:1; transform: translateY(0);}
+
+  /* ===========================================================
+     BOTONES
+     =========================================================== */
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family: var(--font-display); font-weight:700; font-size:1.05rem;
+    padding:18px 38px; border-radius:50px; border:none; cursor:pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    box-shadow: var(--sombra);
+  }
+  .btn:hover{transform: translateY(-4px) scale(1.03);}
+  .btn-amarillo{background: var(--amarillo); color: var(--azul-oscuro);}
+  .btn-amarillo:hover{background: var(--amarillo-oscuro); box-shadow: 0 14px 34px rgba(255,160,0,0.4);}
+  .btn-blanco{background: var(--blanco); color: var(--azul);}
+  .btn-blanco:hover{background: var(--celeste-suave);}
+  .btn-outline{background:transparent; border:2px solid var(--azul); color:var(--azul); box-shadow:none;}
+  .btn-outline:hover{background:var(--azul); color:var(--blanco);}
+
+  /* ===========================================================
+     CHISPA - mascota mini, ícono estilizado flotante
+     =========================================================== */
+  .chispa{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:1em; height:1em; font-style:normal;
+  }
+  .chispa-flotante{
+    position:absolute; font-size:2.4rem; filter: drop-shadow(0 6px 10px rgba(0,0,0,0.15));
+    animation: flotar 3.5s ease-in-out infinite;
+    pointer-events:none; user-select:none;
+  }
+  @keyframes flotar{
+    0%,100%{transform: translateY(0) rotate(-4deg);}
+    50%{transform: translateY(-14px) rotate(4deg);}
+  }
+
+  /* ===========================================================
+     HEADER / NAV
+     =========================================================== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);
+    box-shadow: 0 2px 14px rgba(13,71,161,0.08);
+    padding: 14px 6vw;
+  }
+  .nav-wrap{display:flex; align-items:center; justify-content:space-between; max-width:1180px; margin:0 auto;}
+  .logo{font-family: var(--font-display); font-weight:800; color:var(--azul); font-size:1.3rem; display:flex; gap:8px; align-items:center;}
+  .nav-cta{font-size:0.95rem; padding:12px 24px;}
+
+  /* ===========================================================
+     HERO
+     =========================================================== */
+  .hero{
+    min-height:100vh; padding-top:140px; display:flex; align-items:center;
+    background: linear-gradient(160deg, var(--azul) 0%, var(--azul-oscuro) 55%, #051c3d 100%);
+    color:var(--blanco); overflow:hidden;
+  }
+  .hero::before{
+    content:""; position:absolute; inset:0;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255,213,79,0.18) 0%, transparent 40%),
+      radial-gradient(circle at 85% 75%, rgba(187,222,251,0.18) 0%, transparent 45%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns: 1.1fr 0.9fr; gap:50px; align-items:center;
+    max-width:1180px; margin:0 auto; position:relative; z-index:2;
+  }
+  .hero h1{color:var(--blanco); font-size: clamp(2.2rem, 5vw, 3.4rem); margin-bottom:18px;}
+  .hero h1 span{color:var(--amarillo);}
+  .hero p.sub{font-size:1.15rem; color:var(--celeste); max-width:520px; margin-bottom:32px;}
+  .hero-botones{display:flex; flex-wrap:wrap; gap:16px; margin-bottom:40px;}
+  .hero-datos{
+    display:flex; flex-wrap:wrap; gap:18px;
+  }
+  .dato-pill{
+    background: rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25);
+    border-radius:16px; padding:14px 20px; font-weight:700; font-size:0.95rem;
+    display:flex; align-items:center; gap:10px;
+  }
+  .hero-edades{
+    margin-top:18px; font-weight:800; color:var(--amarillo); font-size:1.05rem;
+  }
+  .hero-visual{
+    position:relative; aspect-ratio: 1/1; border-radius:32px;
+    background: linear-gradient(135deg, var(--celeste) 0%, var(--azul-claro) 50%, var(--amarillo) 150%);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+    overflow:hidden;
+  }
+  .hero-visual::after{
+    content:"📍 Espacio para fotografía del evento"; position:absolute; bottom:16px; left:16px; right:16px;
+    background: rgba(8,48,94,0.55); color:#fff; font-size:0.8rem; padding:10px 14px;
+    border-radius:12px; text-align:center; font-weight:700;
+  }
+  .hero-visual .mascota-grande{font-size: 7rem;}
+  .scroll-indicador{
+    position:absolute; bottom:24px; left:50%; transform:translateX(-50%);
+    color: var(--celeste); font-size:1.8rem; animation: rebote 1.8s infinite; z-index:2;
+  }
+  @keyframes rebote{0%,100%{transform:translateX(-50%) translateY(0);} 50%{transform:translateX(-50%) translateY(10px);}}
+
+  /* ===========================================================
+     SOBRE EL EVENTO
+     =========================================================== */
+  .sobre{background: var(--blanco);}
+  .sobre-grid{display:grid; grid-template-columns: 0.9fr 1.1fr; gap:60px; align-items:center;}
+  .sobre-visual{
+    border-radius: var(--radio); background: var(--celeste-suave);
+    aspect-ratio: 4/3; display:flex; align-items:center; justify-content:center; font-size:5rem;
+    border: 3px dashed var(--azul-claro);
+  }
+  .sobre-texto p{font-size:1.08rem; margin-bottom:16px; color:#4a5b6d;}
+  .sobre-iconos{display:flex; gap:22px; margin-top:24px; flex-wrap:wrap;}
+  .icono-mini{display:flex; align-items:center; gap:10px; font-weight:700; color:var(--azul);}
+  .icono-mini span.ico{font-size:1.6rem;}
+
+  /* ===========================================================
+     VERSÍCULO LEMA
+     =========================================================== */
+  .versiculo{
+    background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+    color:var(--blanco); text-align:center; position:relative;
+  }
+  .versiculo .marca{font-size:5rem; color: rgba(255,213,79,0.5); font-family:Georgia, serif; line-height:0; position:relative; top:30px;}
+  .versiculo blockquote{
+    font-family: var(--font-display); font-size: clamp(1.3rem, 3vw, 2rem);
+    max-width:820px; margin:0 auto 24px; font-weight:600;
+  }
+  .versiculo cite{font-size:1.1rem; color:var(--amarillo); font-weight:800; font-style:normal;}
+
+  /* ===========================================================
+     TARJETAS GENERALES (edades, aprenderán, actividades)
+     =========================================================== */
+  .grid-tarjetas{display:grid; grid-template-columns: repeat(4, 1fr); gap:24px;}
+  .tarjeta{
+    background: var(--blanco); border-radius: var(--radio); padding:32px 24px;
+    text-align:center; box-shadow: var(--sombra); border: 1px solid var(--celeste-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .tarjeta:hover{transform: translateY(-8px); box-shadow: 0 20px 40px rgba(13,71,161,0.22);}
+  .tarjeta .ico-grande{font-size:3rem; margin-bottom:14px; display:block;}
+  .tarjeta h3{font-size:1.25rem; margin-bottom:6px;}
+  .tarjeta .rango{color: var(--azul-claro); font-weight:700; font-size:0.95rem;}
+  .tarjeta.dia{background: var(--celeste-suave); border:none; text-align:left;}
+  .tarjeta.dia .dia-nombre{color:var(--amarillo-oscuro); font-weight:800; text-transform:uppercase; font-size:0.85rem; letter-spacing:0.05em;}
+
+  /* ===========================================================
+     ACTIVIDADES
+     =========================================================== */
+  .grid-actividades{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px;}
+  .actividad{
+    display:flex; align-items:center; gap:18px; background: var(--blanco);
+    border-radius:18px; padding:22px; box-shadow: var(--sombra);
+    border-left: 6px solid var(--amarillo);
+    transition: transform 0.3s ease;
+  }
+  .actividad:hover{transform: translateX(6px);}
+  .actividad .ico-act{font-size:2.2rem;}
+  .actividad h4{font-size:1.1rem; margin-bottom:2px;}
+
+  /* ===========================================================
+     HORARIO - timeline
+     =========================================================== */
+  .horario-fondo{background: var(--celeste-suave);}
+  .timeline{
+    position:relative; max-width:760px; margin:0 auto; padding-left:40px;
+  }
+  .timeline::before{
+    content:""; position:absolute; left:11px; top:0; bottom:0; width:4px;
+    background: var(--azul-claro); border-radius:4px;
+  }
+  .tl-item{position:relative; padding-bottom:42px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:""; position:absolute; left:-40px; top:2px; width:24px; height:24px;
+    background: var(--amarillo); border:4px solid var(--blanco); border-radius:50%;
+    box-shadow: 0 0 0 4px var(--azul-claro);
+  }
+  .tl-hora{font-family: var(--font-display); color:var(--azul); font-weight:800; font-size:1.15rem;}
+  .tl-desc{color:#4a5b6d; margin-top:4px;}
+
+  /* ===========================================================
+     FAQ - acordeón
+     =========================================================== */
+  .faq-item{
+    border-bottom: 2px solid var(--celeste-suave); padding:22px 0;
+  }
+  .faq-pregunta{
+    display:flex; justify-content:space-between; align-items:center;
+    cursor:pointer; font-family: var(--font-display); font-weight:700;
+    font-size:1.15rem; color: var(--azul-oscuro);
+  }
+  .faq-pregunta .signo{font-size:1.6rem; color: var(--amarillo-oscuro); transition: transform 0.3s ease;}
+  .faq-item.abierto .signo{transform: rotate(45deg);}
+  .faq-respuesta{
+    max-height:0; overflow:hidden; transition: max-height 0.35s ease, padding 0.35s ease;
+    color:#5b6b7d; font-size:1.02rem;
+  }
+  .faq-item.abierto .faq-respuesta{max-height:200px; padding-top:14px;}
+
+  /* ===========================================================
+     UBICACIÓN
+     =========================================================== */
+  .ubicacion-grid{display:grid; grid-template-columns: 1fr 1fr; gap:50px; align-items:center;}
+  .mapa-placeholder{
+    border-radius: var(--radio); background: var(--celeste-suave);
+    aspect-ratio:4/3; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    border:3px dashed var(--azul-claro); gap:10px; text-align:center; padding:20px;
+  }
+  .mapa-placeholder .pin{font-size:3.5rem;}
+  .direccion-box p{font-size:1.1rem; margin-bottom:24px; line-height:1.7;}
+
+  /* ===========================================================
+     CTA FINAL
+     =========================================================== */
+  .cta-final{
+    background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%);
+    color:var(--blanco); text-align:center; overflow:hidden; position:relative;
+  }
+  .cta-final h2{color:var(--blanco); font-size: clamp(2rem, 4.5vw, 3rem);}
+  .cta-final p{font-size:1.2rem; color: var(--celeste); margin: 18px 0 36px;}
+  .countdown{
+    display:flex; justify-content:center; gap:18px; margin-bottom:44px; flex-wrap:wrap;
+  }
+  .countdown .num-box{
+    background: rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.25);
+    border-radius:18px; padding:18px 22px; min-width:90px;
+  }
+  .countdown .num-box .num{font-family: var(--font-display); font-size:2.2rem; font-weight:800; color: var(--amarillo);}
+  .countdown .num-box .lbl{font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--celeste);}
+
+  /* ===========================================================
+     FOOTER
+     =========================================================== */
+  footer{background: #061B36; color:#AFC6E0; padding: 60px 6vw 30px;}
+  .footer-grid{display:grid; grid-template-columns: 1.2fr 1fr 1fr; gap:40px; max-width:1180px; margin:0 auto 40px;}
+  footer h4{color:var(--blanco); font-family: var(--font-display); margin-bottom:16px; font-size:1.1rem;}
+  footer p, footer a{font-size:0.95rem; line-height:1.8;}
+  footer a:hover{color: var(--amarillo);}
+  .redes{display:flex; gap:14px; margin-top:10px;}
+  .redes a{
+    width:44px; height:44px; border-radius:50%; background: rgba(255,255,255,0.08);
+    display:flex; align-items:center; justify-content:center; font-size:1.3rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  .redes a:hover{background: var(--amarillo); color: var(--azul-oscuro); transform: translateY(-4px);}
+  .footer-bottom{
+    text-align:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px;
+    font-size:0.85rem; max-width:1180px; margin:0 auto;
+  }
+
+  /* ===========================================================
+     RESPONSIVE
+     =========================================================== */
+  @media (max-width: 980px){
+    .hero-grid{grid-template-columns: 1fr;}
+    .hero-visual{order:-1; max-width:380px; margin:0 auto;}
+    .sobre-grid{grid-template-columns: 1fr;}
+    .sobre-visual{order:-1; max-width:340px; margin:0 auto;}
+    .grid-tarjetas{grid-template-columns: repeat(2, 1fr);}
+    .grid-actividades{grid-template-columns: repeat(2, 1fr);}
+    .ubicacion-grid{grid-template-columns: 1fr;}
+    .footer-grid{grid-template-columns: 1fr; gap:30px;}
+  }
+  @media (max-width: 600px){
+    section{padding: 70px 6vw;}
+    .grid-tarjetas{grid-template-columns: 1fr 1fr;}
+    .grid-actividades{grid-template-columns: 1fr;}
+    .nav-cta{display:none;}
+    .countdown .num-box{min-width:72px; padding:14px 12px;}
+    .countdown .num-box .num{font-size:1.6rem;}
+  }
+
+  /* Respeta preferencia de movimiento reducido */
+  @media (prefers-reduced-motion: reduce){
+    .fade-up, .chispa-flotante, .scroll-indicador{animation:none !important; transition:none !important; opacity:1 !important; transform:none !important;}
+  }
+
+  /* Foco visible para accesibilidad de teclado */
+  a:focus-visible, button:focus-visible{outline: 3px solid var(--amarillo); outline-offset:3px;}
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER / NAV ===================== -->
+<header>
+  <div class="nav-wrap">
+    <div class="logo"><span class="chispa">✨</span> EBV 2026</div>
+    <a href="https://forms.gle/9CnGxPk4G34yuWFU9" target="_blank" rel="noopener" class="btn btn-amarillo nav-cta">Inscribir</a>
+  </div>
+</header>
+
+<!-- ===================== 1. HERO ===================== -->
+<section class="hero" id="hero">
+  <div class="hero-grid">
+    <div class="fade-up visible">
+      <h1>Escuela Bíblica de Vacaciones 2026<br><span>“¿Quién es Jesús?”</span></h1>
+      <p class="sub">Cinco días para descubrir quién es Jesús mientras aprendemos, cantamos, jugamos y hacemos nuevos amigos.</p>
+      <div class="hero-botones">
+        <a href="https://forms.gle/9CnGxPk4G34yuWFU9" target="_blank" rel="noopener" class="btn btn-amarillo">Inscribe a tu hijo</a>
+      </div>
+      <div class="hero-datos">
+        <div class="dato-pill">📅 20 al 24 de julio de 2026</div>
+        <div class="dato-pill">🕘 9:00 a 12:30 hrs.</div>
+        <div class="dato-pill">📍 Iglesia Cristiana Bethel, Tonanitla</div>
+      </div>
+      <div class="hero-edades">¡Para niños y jóvenes de 4 a 14 años!</div>
+    </div>
+    <div class="hero-visual fade-up visible">
+      <span class="mascota-grande">✨</span>
+    </div>
+  </div>
+  <div class="scroll-indicador">⌄</div>
+</section>
+
+<!-- ===================== 2. SOBRE EL EVENTO ===================== -->
+<section class="sobre" id="sobre">
+  <div class="contenedor sobre-grid">
+    <div class="sobre-visual fade-up">🧒📖🎨</div>
+    <div class="sobre-texto fade-up">
+      <span class="eyebrow">Sobre el evento</span>
+      <h2 class="titulo-seccion">Un espacio para crecer en fe, jugando y riendo</h2>
+      <p>La Escuela Bíblica de Vacaciones es una aventura de cinco días donde los niños descubren quién es Jesús a través de actividades dinámicas, manualidades creativas, cantos llenos de alegría y muchos juegos.</p>
+      <p>Cada día está diseñado para que los pequeños aprendan verdades bíblicas de forma divertida, hagan nuevos amigos y vivan momentos de convivencia cristiana que recordarán todo el año.</p>
+      <div class="sobre-iconos">
+        <div class="icono-mini"><span class="ico">📖</span> Biblia</div>
+        <div class="icono-mini"><span class="ico">🎨</span> Manualidades</div>
+        <div class="icono-mini"><span class="ico">🎵</span> Cantos</div>
+        <div class="icono-mini"><span class="ico">🎉</span> Juegos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 3. VERSÍCULO LEMA ===================== -->
+<section class="versiculo" id="versiculo">
+  <div class="contenedor fade-up">
+    <div class="marca">"</div>
+    <blockquote>El Hijo irradia la gloria de Dios y expresa el carácter mismo de Dios, y sostiene todo con el gran poder de su palabra. Después de habernos limpiado de nuestros pecados, se sentó en el lugar de honor, a la derecha del majestuoso Dios en el cielo.</blockquote>
+    <cite>Hebreos 1:3 (NTV)</cite>
+  </div>
+</section>
+
+<!-- ===================== 4. ¿QUIÉNES PUEDEN ASISTIR? ===================== -->
+<section id="edades">
+  <div class="contenedor">
+    <div class="fade-up" style="text-align:center;">
+      <span class="eyebrow" style="margin:0 auto 18px; display:table;">Edades</span>
+      <h2 class="titulo-seccion" style="margin:0 auto 14px;">¿Quiénes pueden asistir?</h2>
+      <p class="subtitulo-seccion" style="margin:0 auto 50px;">Tenemos un grupo especial para cada edad, ¡todos son bienvenidos!</p>
+    </div>
+    <div class="grid-tarjetas">
+      <div class="tarjeta fade-up">
+        <span class="ico-grande">🧸</span>
+        <h3>Párvulos</h3>
+        <div class="rango">4-5 años</div>
+      </div>
+      <div class="tarjeta fade-up">
+        <span class="ico-grande">🎈</span>
+        <h3>Principiantes</h3>
+        <div class="rango">6-8 años</div>
+      </div>
+      <div class="tarjeta fade-up">
+        <span class="ico-grande">⚽</span>
+        <h3>Primarios</h3>
+        <div class="rango">9-11 años</div>
+      </div>
+      <div class="tarjeta fade-up">
+        <span class="ico-grande">🎸</span>
+        <h3>Adolescentes</h3>
+        <div class="rango">12-14 años</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5. ¿QUÉ APRENDERÁN? ===================== -->
+<section class="horario-fondo" id="aprenderan">
+  <div class="contenedor">
+    <div class="fade-up" style="text-align:center;">
+      <span class="eyebrow" style="margin:0 auto 18px; display:table;">Plan de la semana</span>
+      <h2 class="titulo-seccion" style="margin:0 auto 14px;">¿Qué aprenderán?</h2>
+      <p class="subtitulo-seccion" style="margin:0 auto 50px;">Cada día descubriremos juntos una verdad sobre Jesús.</p>
+    </div>
+    <div class="grid-tarjetas">
+      <div class="tarjeta dia fade-up">
+        <span class="ico-grande">🌅</span>
+        <div class="dia-nombre">Lunes</div>
+        <h3>Jesús es Dios</h3>
+      </div>
+      <div class="tarjeta dia fade-up">
+        <span class="ico-grande">❤️</span>
+        <div class="dia-nombre">Martes</div>
+        <h3>Jesús es el Salvador</h3>
+      </div>
+      <div class="tarjeta dia fade-up">
+        <span class="ico-grande">👑</span>
+        <div class="dia-nombre">Miércoles</div>
+        <h3>Jesús es el Señor</h3>
+      </div>
+      <div class="tarjeta dia fade-up">
+        <span class="ico-grande">🐑</span>
+        <div class="dia-nombre">Jueves</div>
+        <h3>Jesús es el Buen Pastor</h3>
+      </div>
+      <div class="tarjeta dia fade-up">
+        <span class="ico-grande">🛤️</span>
+        <div class="dia-nombre">Viernes</div>
+        <h3>Jesús es el Camino</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 6. ACTIVIDADES ===================== -->
+<section id="actividades">
+  <div class="contenedor">
+    <div class="fade-up" style="text-align:center;">
+      <span class="eyebrow" style="margin:0 auto 18px; display:table;">Cada día</span>
+      <h2 class="titulo-seccion" style="margin:0 auto 14px;">Actividades</h2>
+      <p class="subtitulo-seccion" style="margin:0 auto 50px;">¡Diversión y aprendizaje en cada rincón!</p>
+    </div>
+    <div class="grid-actividades">
+      <div class="actividad fade-up"><span class="ico-act">📖</span><div><h4>Conocimiento Bíblico</h4></div></div>
+      <div class="actividad fade-up"><span class="ico-act">✂️</span><div><h4>Manualidades</h4></div></div>
+      <div class="actividad fade-up"><span class="ico-act">🎵</span><div><h4>Cantos</h4></div></div>
+      <div class="actividad fade-up"><span class="ico-act">🎉</span><div><h4>Juegos</h4></div></div>
+      <div class="actividad fade-up"><span class="ico-act">🤝</span><div><h4>Convivencia</h4></div></div>
+      <div class="actividad fade-up"><span class="ico-act">🏆</span><div><h4>Premios</h4></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. HORARIO ===================== -->
+<section class="horario-fondo" id="horario">
+  <div class="contenedor">
+    <div class="fade-up" style="text-align:center;">
+      <span class="eyebrow" style="margin:0 auto 18px; display:table;">Un día típico</span>
+      <h2 class="titulo-seccion" style="margin:0 auto 14px;">Horario</h2>
+    </div>
+    <div class="timeline fade-up">
+      <div class="tl-item">
+        <div class="tl-hora">9:00 hrs</div>
+        <div class="tl-desc">Apertura — bienvenida, alabanza y oración</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-hora">9:30 — 11:30 hrs</div>
+        <div class="tl-desc">Rotación de actividades: Biblia, manualidades, juegos y cantos</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-hora">12:00 hrs</div>
+        <div class="tl-desc">Clausura del día — entrega de niños a sus papás</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 8. PREGUNTAS FRECUENTES ===================== -->
+<section id="faq">
+  <div class="contenedor" style="max-width:760px;">
+    <div class="fade-up" style="text-align:center;">
+      <span class="eyebrow" style="margin:0 auto 18px; display:table;">Dudas comunes</span>
+      <h2 class="titulo-seccion" style="margin:0 auto 14px;">Preguntas frecuentes</h2>
+    </div>
+    <div class="fade-up">
+      <div class="faq-item">
+        <div class="faq-pregunta" onclick="toggleFaq(this)">¿Tiene costo? <span class="signo">+</span></div>
+        <div class="faq-respuesta"><p>No, es completamente gratis.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta" onclick="toggleFaq(this)">¿Los padres pueden quedarse? <span class="signo">+</span></div>
+        <div class="faq-respuesta"><p>No. Pero habrá excepciones para niños con condiciones diferentes, además estaremos en contacto vía WhatsApp.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta" onclick="toggleFaq(this)">¿Qué deben llevar los niños? <span class="signo">+</span></div>
+        <div class="faq-respuesta"><p>Disposición a divertirse y una botella de agua.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-pregunta" onclick="toggleFaq(this)">¿Habrá refrigerio? <span class="signo">+</span></div>
+        <div class="faq-respuesta"><p>Sí, totalmente gratis.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 9. UBICACIÓN ===================== -->
+<section class="horario-fondo" id="ubicacion">
+  <div class="contenedor ubicacion-grid">
+    <div class="mapa-placeholder fade-up">
+      <span class="pin">📍</span>
+      <strong>Iglesia Cristiana Bethel, Tonanitla</strong>
+    </div>
+    <div class="direccion-box fade-up">
+      <span class="eyebrow">Ubicación</span>
+      <h2 class="titulo-seccion">¿Cómo llegar?</h2>
+      <p>10 de Junio 284, Villas de Santa María, 55785 Santa María Tonanitla, Méx.</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=10+de+Junio+284,+Villas+de+Santa+Maria,+55785+Santa+Maria+Tonanitla,+Mexico" target="_blank" rel="noopener" class="btn btn-outline">📍 Ver en Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 10. CTA FINAL ===================== -->
+<section class="cta-final" id="inscribe">
+  <div class="contenedor fade-up">
+    <h2>¡Los lugares son limitados!</h2>
+    <p>Registra a tu hijo hoy mismo.</p>
+
+    <!-- Contador regresivo -->
+    <div class="countdown" id="countdown">
+      <div class="num-box"><div class="num" id="cd-dias">00</div><div class="lbl">Días</div></div>
+      <div class="num-box"><div class="num" id="cd-horas">00</div><div class="lbl">Horas</div></div>
+      <div class="num-box"><div class="num" id="cd-min">00</div><div class="lbl">Min</div></div>
+      <div class="num-box"><div class="num" id="cd-seg">00</div><div class="lbl">Seg</div></div>
+    </div>
+
+    <a href="https://forms.gle/9CnGxPk4G34yuWFU9" target="_blank" rel="noopener" class="btn btn-amarillo" style="font-size:1.2rem; padding:22px 48px;">INSCRIBIR A MI HIJO</a>
+  </div>
+</section>
+
+<!-- ===================== 11. FOOTER ===================== -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>✨ Concilio de Iglesias Cristianas Bethel</h4>
+      <p>Escuela Bíblica de Vacaciones 2026<br>“¿Quién es Jesús?”</p>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <p><a href="https://wa.me/525579661318" target="_blank" rel="noopener">WhatsApp: 5579661318</a></p>
+      <p>10 de Junio 284, Villas de Santa María, Tonanitla, Méx.</p>
+    </div>
+    <div>
+      <h4>Síguenos</h4>
+      <div class="redes">
+        <a href="https://www.facebook.com/share/1B83fvLpdz/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+        <a href="https://www.instagram.com/iglesia.cristiana.bethel.tona?igsh=MW9kb2Izcm00dDdpZg==" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://wa.me/525579661318" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 Concilio de Iglesias Cristianas Bethel Tonanitla. Todos los derechos reservados.
+  </div>
+</footer>
+
+<!-- ===================== JAVASCRIPT ===================== -->
+<script>
+  // -----------------------------------------------------------
+  // 1. Animación Fade Up al hacer scroll (IntersectionObserver)
+  // -----------------------------------------------------------
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('section:not(.hero) .fade-up, .hero .fade-up').forEach(function(el){
+      // El hero ya entra visible; el resto se anima al hacer scroll
+      if(!el.closest('.hero')) el.classList.remove('visible');
+    });
+
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(function(el){
+      observer.observe(el);
+    });
+  });
+
+  // -----------------------------------------------------------
+  // 2. Acordeón de Preguntas Frecuentes
+  // -----------------------------------------------------------
+  function toggleFaq(elemento){
+    var item = elemento.parentElement;
+    // Cierra los demás (acordeón exclusivo) — comenta esta línea si quieres varios abiertos a la vez
+    document.querySelectorAll('.faq-item.abierto').forEach(function(otro){
+      if(otro !== item) otro.classList.remove('abierto');
+    });
+    item.classList.toggle('abierto');
+  }
+
+  // -----------------------------------------------------------
+  // 3. Contador regresivo hacia el 20 de julio de 2026, 9:00 hrs
+  // -----------------------------------------------------------
+  (function contadorRegresivo(){
+    var fechaMeta = new Date('2026-07-20T09:00:00-06:00').getTime();
+
+    function actualizar(){
+      var ahora = new Date().getTime();
+      var diferencia = fechaMeta - ahora;
+
+      if(diferencia <= 0){
+        document.getElementById('cd-dias').textContent = '00';
+        document.getElementById('cd-horas').textContent = '00';
+        document.getElementById('cd-min').textContent = '00';
+        document.getElementById('cd-seg').textContent = '00';
+        return;
+      }
+
+      var dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      var horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      var segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-dias').textContent = String(dias).padStart(2, '0');
+      document.getElementById('cd-horas').textContent = String(horas).padStart(2, '0');
+      document.getElementById('cd-min').textContent = String(minutos).padStart(2, '0');
+      document.getElementById('cd-seg').textContent = String(segundos).padStart(2, '0');
+    }
+
+    actualizar();
+    setInterval(actualizar, 1000);
+  })();
+</script>
+
+</body>
+</html>
