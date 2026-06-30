@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <!-- Background with transparency -->
+  <defs>
+    <style>
+      .hair { fill: #D4A574; }
+      .skin { fill: #F5C9A8; }
+      .eyes { fill: #000000; stroke: #000000; stroke-width: 8; }
+      .mouth { fill: #FF6B9D; }
+      .shirt { fill: #5B7CCC; }
+      .shirt-accent { fill: #9B6B8F; }
+      .pants { fill: #4CAF50; }
+      .shoes { fill: #333333; }
+      .outline { fill: none; stroke: #E8956A; stroke-width: 12; }
+    </style>
+  </defs>
+
+  <!-- Head -->
+  <circle cx="400" cy="280" r="120" class="skin outline"/>
+  <circle cx="400" cy="280" r="110" class="skin"/>
+
+  <!-- Hair -->
+  <path d="M 290 200 Q 290 120 400 100 Q 510 120 510 200 Q 510 180 480 160 Q 450 140 400 135 Q 350 140 320 160 Q 290 180 290 200" class="hair outline"/>
+  <path d="M 290 200 Q 290 120 400 100 Q 510 120 510 200 Q 510 180 480 160 Q 450 140 400 135 Q 350 140 320 160 Q 290 180 290 200" class="hair"/>
+
+  <!-- Hair bangs -->
+  <ellipse cx="340" cy="200" rx="35" ry="50" class="hair"/>
+  <ellipse cx="460" cy="200" rx="35" ry="50" class="hair"/>
+
+  <!-- Left eye -->
+  <ellipse cx="360" cy="270" rx="20" ry="28" class="eyes"/>
+  <circle cx="360" cy="275" r="10" fill="#FFFFFF"/>
+  <circle cx="362" cy="273" r="6" fill="#000000"/>
+
+  <!-- Right eye -->
+  <ellipse cx="440" cy="270" rx="20" ry="28" class="eyes"/>
+  <circle cx="440" cy="275" r="10" fill="#FFFFFF"/>
+  <circle cx="442" cy="273" r="6" fill="#000000"/>
+
+  <!-- Nose -->
+  <line x1="400" y1="280" x2="400" y2="320" stroke="#E8956A" stroke-width="4"/>
+
+  <!-- Mouth (happy/cute expression) -->
+  <path d="M 380 340 Q 400 360 420 340" class="mouth" stroke="#FF6B9D" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="400" cy="348" rx="15" ry="12" class="mouth"/>
+
+  <!-- Ears -->
+  <ellipse cx="280" cy="280" rx="25" ry="40" class="skin outline"/>
+  <ellipse cx="280" cy="280" rx="22" ry="37" class="skin"/>
+  <ellipse cx="520" cy="280" rx="25" ry="40" class="skin outline"/>
+  <ellipse cx="520" cy="280" rx="22" ry="37" class="skin"/>
+
+  <!-- Body/Shirt -->
+  <rect x="300" y="400" width="200" height="140" rx="30" class="shirt outline"/>
+  <rect x="305" y="405" width="190" height="130" rx="28" class="shirt"/>
+
+  <!-- Shirt stripes/pattern -->
+  <path d="M 330 420 Q 340 480 330 530" stroke="#9B6B8F" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M 400 420 Q 410 480 400 530" stroke="#9B6B8F" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M 470 420 Q 480 480 470 530" stroke="#9B6B8F" stroke-width="12" fill="none" stroke-linecap="round"/>
+
+  <!-- Arms -->
+  <ellipse cx="280" cy="450" rx="35" ry="60" class="skin outline"/>
+  <ellipse cx="280" cy="450" rx="30" ry="55" class="skin"/>
+  <ellipse cx="520" cy="450" rx="35" ry="60" class="skin outline"/>
+  <ellipse cx="520" cy="450" rx="30" ry="55" class="skin"/>
+
+  <!-- Hands -->
+  <circle cx="260" cy="520" r="28" class="skin outline"/>
+  <circle cx="260" cy="520" r="25" class="skin"/>
+  <circle cx="540" cy="520" r="28" class="skin outline"/>
+  <circle cx="540" cy="520" r="25" class="skin"/>
+
+  <!-- Pants -->
+  <rect x="330" y="540" width="70" height="100" rx="15" class="pants outline"/>
+  <rect x="335" y="545" width="60" height="90" rx="13" class="pants"/>
+  <rect x="400" y="540" width="70" height="100" rx="15" class="pants outline"/>
+  <rect x="405" y="545" width="60" height="90" rx="13" class="pants"/>
+
+  <!-- Shoes -->
+  <ellipse cx="365" cy="660" rx="40" ry="30" class="shoes outline"/>
+  <ellipse cx="365" cy="660" rx="35" ry="25" class="shoes"/>
+  <ellipse cx="435" cy="660" rx="40" ry="30" class="shoes outline"/>
+  <ellipse cx="435" cy="660" rx="35" ry="25" class="shoes"/>
+
+  <!-- Highlights/shine on shirt -->
+  <ellipse cx="340" cy="430" rx="20" ry="30" fill="#FFFFFF" opacity="0.3"/>
+  <ellipse cx="460" cy="430" rx="20" ry="30" fill="#FFFFFF" opacity="0.3"/>
+</svg>
